@@ -15,7 +15,15 @@ namespace Be.BankVanBreda.Online.UI.Phone
 					Children = {
 						new Label {
 							XAlign = TextAlignment.Center,
-							Text = "Welcome to the forms 1.5 smartphone application!"
+							#if DEBUG
+							Text = "Debuggen maar!"
+							#elif PREPRODUCTION
+							Text = "Preproductie!"
+							#else
+							Text = "Productie!"
+							#endif
+
+							
 						}
 					}
 				}

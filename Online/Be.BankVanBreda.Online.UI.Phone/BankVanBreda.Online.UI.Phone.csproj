@@ -7,10 +7,8 @@
     <ProjectGuid>{634C6972-4DB0-4BC8-9874-15B83C21000C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>be.bankvanbreda.online.ui.phone</RootNamespace>
-    <AssemblyName>Online</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
-    <BaseDirectory>.</BaseDirectory>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,14 +19,38 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AssemblyName>Online</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AssemblyName>Online</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PreProduction|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\PreProduction</OutputPath>
+    <DefineConstants>PREPRODUCTION;</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>BankVanBreda.Online.UI.Phone</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PreProduction|iPhoneSimulator' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\PreProduction</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>BankVanBreda.Online.UI.Phone</AssemblyName>
+    <DefineConstants>PREPRODUCTION;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'PreProduction|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\PreProduction</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>BankVanBreda.Online.UI.Phone</AssemblyName>
+    <DefineConstants>PREPRODUCTION;</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
