@@ -52,7 +52,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmartPhoneApplication.cs" />
+    <Compile Include="Screens\Register\SelectLanguagePage.xaml.cs">
+      <DependentUpon>SelectLanguagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SmartPhoneApplication.xaml.cs">
+      <DependentUpon>SmartPhoneApplication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\PageFactory.cs" />
+    <Compile Include="Framework\IPageFactory.cs" />
+    <Compile Include="Framework\BaseModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -66,8 +74,30 @@
     <Reference Include="Xamarin.Forms.Platform">
       <HintPath>..\packages\Xamarin.Forms.1.5.0.6447\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Portable.Ninject.3.3.1\lib\portable-net4+sl5+wp8+win8+wpa81+monotouch+monoandroid+Xamarin.iOS\Ninject.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screens\" />
+    <Folder Include="Screens\Register\" />
+    <Folder Include="Framework\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Screens\Register\SelectLanguagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartPhoneApplication.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Be.BankVanBreda.Online.UI.Phone.Presentation\Be.BankVanBreda.Online.UI.Phone.Presentation.csproj">
+      <Project>{8AAA9E91-70EE-4522-96E3-0F371726B554}</Project>
+      <Name>Be.BankVanBreda.Online.UI.Phone.Presentation</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
