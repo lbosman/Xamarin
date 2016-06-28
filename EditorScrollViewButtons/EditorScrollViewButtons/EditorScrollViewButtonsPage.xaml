@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:EditorScrollViewButtons"
+  x:Class="EditorScrollViewButtons.EditorScrollViewButtonsPage"
+  Title="Editor Scroll Test">
+  <ScrollView
+    VerticalOptions="FillAndExpand"
+    HorizontalOptions="FillAndExpand">
+    <StackLayout
+      Orientation="Vertical">
+      <Editor
+        x:Name="MyEditor"
+        HeightRequest="100"
+        MinimumHeightRequest="100"
+        WidthRequest="300"
+        MinimumWidthRequest="300"
+        BackgroundColor="Gray">
+      </Editor>
+      <StackLayout
+        Orientation="Horizontal">
+        <Button
+          HeightRequest="100"
+          MinimumHeightRequest="100"
+          WidthRequest="150"
+          MinimumWidthRequest="150"
+          BackgroundColor="Green"
+          x:Name="btnIncrease"
+          Text="Increase"
+          Clicked="Increase_Clicked" />
+        <Button
+          HeightRequest="100"
+          MinimumHeightRequest="100"
+          WidthRequest="150"
+          MinimumWidthRequest="150"
+          BackgroundColor="Red"
+          x:Name="btnDecrease"
+          Text="Decrease"
+          Clicked="Decrease_Clicked" />
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>
